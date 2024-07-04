@@ -48,7 +48,7 @@ dependencies {
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    //implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    // implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
@@ -56,8 +56,8 @@ dependencies {
 
     implementation(rootProject.extra["viewModelDep"].toString())
 
-    implementation(rootProject.extra["daggerKapt"].toString())
-    kapt(rootProject.extra["daggerDep"].toString())
+    implementation(rootProject.extra["daggerDep"].toString())
+    kapt(rootProject.extra["daggerKapt"].toString())
 
     implementation(rootProject.extra["injectDep"].toString())
 
@@ -73,4 +73,7 @@ dependencies {
     implementation(rootProject.extra["composeDep"].toString())
     implementation(rootProject.extra["bomDep"].toString())
     implementation(rootProject.extra["foundationDep"].toString())
+
+    implementation(rootProject.extra["dataStoreDep"].toString())
+    implementation(rootProject.extra["dataStoreCoreDep"].toString())
 }

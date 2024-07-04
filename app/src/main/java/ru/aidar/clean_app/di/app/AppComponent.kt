@@ -3,26 +3,27 @@ package ru.aidar.clean_app.di.app
 import dagger.BindsInstance
 import dagger.Component
 import ru.aidar.app_common.di.CommonApi
-import ru.aidar.app_common.di.module.CommonModule
-import ru.aidar.app_common.di.module.NetworkModule
 import ru.aidar.app_common.scope.ApplicationScope
 import ru.aidar.clean_app.App
 import ru.aidar.clean_app.di.deps.ComponentDependenciesModule
+import ru.aidar.clean_app.di.deps.ComponentHolderModule
 import ru.aidar.clean_app.di.main.MainDependencies
 
 // @Component
 @Component(
     modules = [
         AppModule::class,
+        LocalManagerModule::class,
         NavigationModule::class,
-        //NetworkModule::class,
-        //CommonModule::class,
+        FeatureManagerModule::class,
+        ComponentHolderModule::class,
         ComponentDependenciesModule::class,
     ],
 )
 @ApplicationScope
 interface AppComponent : CommonApi, MainDependencies {
-        companion object {
+
+    companion object {
         fun init(application: App): AppComponent {
             return DaggerAppComponent
                 .builder()

@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -41,6 +42,8 @@ android {
 
 dependencies {
 
+    implementation(project(":app_common"))
+
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
 
@@ -54,4 +57,9 @@ dependencies {
     implementation(rootProject.extra["dataStoreDep"].toString())
     // implementation(project(rootProject.extra["bomDep"].toString()))
     implementation(rootProject.extra["foundationDep"].toString())
+
+    implementation(rootProject.extra["viewModelDep"].toString())
+
+    implementation(rootProject.extra["daggerDep"].toString())
+    kapt(rootProject.extra["daggerKapt"].toString())
 }

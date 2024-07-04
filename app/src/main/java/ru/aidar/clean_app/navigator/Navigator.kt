@@ -1,27 +1,18 @@
 package ru.aidar.clean_app.navigator
 
 import androidx.navigation.NavController
-import androidx.navigation.NavGraph
 import ru.aidar.clean_app.R
+import ru.aidar.menu_impl.MenuRouter
 
-interface AppRouter {
-
-    fun navigateToCats()
-
-    fun navigateToDogs()
-
-    fun navigateUp()
-}
-
-class Navigator : AppRouter {
+class Navigator : MenuRouter {
 
     private var gpNavController: NavController? = null
 
     fun attachNavController(
         navController: NavController,
-        graph: NavGraph,
+        graph: Int,
     ) {
-        navController.setGraph(graph, null)
+        navController.setGraph(graph)
         gpNavController = navController
     }
 

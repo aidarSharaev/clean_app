@@ -13,6 +13,7 @@ abstract class BaseActivity<T : BaseViewModel>() : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(layoutResource())
         inject()
+        initViews()
     }
 
     abstract fun inject()

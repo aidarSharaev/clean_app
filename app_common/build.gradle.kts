@@ -57,5 +57,9 @@ dependencies {
     implementation(rootProject.extra["activityDep"].toString())
 
     implementation(rootProject.extra["daggerDep"].toString())
-    implementation(rootProject.extra["daggerKapt"].toString())
+    kapt(rootProject.extra["daggerKapt"].toString())
+
+    implementation(rootProject.extra["roomDep"].toString())
+    annotationProcessor(rootProject.extra["roomAp"].toString())
+    kapt(rootProject.extra["roomKapt"].toString())
 }

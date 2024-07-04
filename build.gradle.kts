@@ -27,6 +27,8 @@ buildscript {
 
     val activityVersion by extra { "1.8.2" }
 
+    val roomVersion by extra { "2.6.1" }
+
 
     val daggerDep by extra { "com.google.dagger:dagger:$daggerVersion" }
     val daggerKapt by extra { "com.google.dagger:dagger-compiler:$daggerVersion" }
@@ -52,6 +54,12 @@ buildscript {
     val injectDep by extra { "javax.inject:javax.inject:$injectVersion" }
 
     val activityDep by extra { "androidx.activity:activity-ktx:$activityVersion" }
+
+    val roomDep by extra { "androidx.room:room-runtime:$roomVersion" }
+    val roomAp by extra { "androidx.room:room-compiler:$roomVersion" }
+
+    // To use Kotlin annotation processing tool (kapt)
+    val roomKapt by extra { "androidx.room:room-compiler:$roomVersion" }
 }
 
 

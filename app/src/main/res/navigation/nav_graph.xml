@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/menuFragment"
-        android:name="ru.aidar.menu_impl.MenuFragment"
+        android:name="ru.aidar.menu_impl.presentation.MenuFragment"
         android:label="MenuFragment" >
         <action
             android:id="@+id/action_menuFragment_to_dogFragment"
